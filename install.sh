@@ -1,12 +1,7 @@
 #!/bin/bash
 
-echo "this script requires wget and curl to be installed"
+echo "this script requires curl to be installed"
 
-if ! command -v wget &> /dev/null
-then
-    echo "wget not installed, quitting."
-    exit
-fi
 if ! command -v curl &> /dev/null
 then
     echo "curl not installed, quitting."
@@ -50,7 +45,7 @@ cp -i $SCRIPT_DIR/.gtkrc-2.0 ~/.gtkrc-2.0
 
 # copy zsh prompt
 mkdir $LOCAL/src/zsh-prompt -p
-wget https://raw.githubusercontent.com/the-argus/functional-dots/main/.local/src/zsh-prompt/minimal.zsh -O $LOCAL/src/zsh-prompt/minimal.zsh
+curl https://raw.githubusercontent.com/the-argus/functional-dots/main/.local/src/zsh-prompt/minimal.zsh -o $LOCAL/src/zsh-prompt/minimal.zsh
 
 echo "COPYING UNGOOGLED CHROMIUM INFO TO ARCH PACMAN.CONF"
 
@@ -77,8 +72,8 @@ sudo pacman -S $(cat paclist)
 yay -S $(cat yaylist)
 
 echo "INSTALLING ROSE-PINE-GTK"
-wget https://github.com/rose-pine/gtk/releases/download/v2.0.0/AllRosePineThemesGTK.tar.gz
-wget https://github.com/rose-pine/gtk/releases/download/v2.0.0/AllRosePineThemesIcons.tar.gz
+curl https://github.com/rose-pine/gtk/releases/download/v2.0.0/AllRosePineThemesGTK.tar.gz
+curl https://github.com/rose-pine/gtk/releases/download/v2.0.0/AllRosePineThemesIcons.tar.gz
 
 tar xf AllRosePineThemesGTK.tar.gz
 tar xf AllRosePineThemesIcons.tar.gz
