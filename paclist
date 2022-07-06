@@ -15,10 +15,11 @@ noto-fonts-extra
 qtile
 rofi
 sxiv
-ungoogled-chromium
 xclip
 xfce4-clipman-plugin
 xmousepasteblock-git
+xorg
+xorg-xinit
 xsuspender-git
 zathura
 zathura-pdf-poppler
